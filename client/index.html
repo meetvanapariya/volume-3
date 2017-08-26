@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>25/8</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src = "bower_components/angular/angular.min.js"></script>
+	 <script src= "bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<script src = "bower_components/jquery/dist/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<script src = "app/app.config.js"></script>
+	<script src = "controller/casualCltr.js"></script>
+	<style>
+	body{
+    background: linear-gradient(to right, rgb(28,188,180), rgb(54,184,233));
+	}  
+	.bgcolor{
+		background-color:#5f5f5f;
+	}
+	.marginlogo{
+		margin-top: -50px;
+	}
+	.fontsA{
+		font-family: 'Montserrat', sans-serif;
+	}
+	
+	</style>
+</head>
+<body >
+	<div class="w3-sidebar w3-bar-block w3-card-2 w3-animate-left fontsA" style="display:none" id="mySidebar">
+		<button class="w3-bar-item w3-button w3-large"
+		onclick="w3_close()">Close <i class="fa fa-times w3-right" aria-hidden="true"></i></button>
+		<a ui-sref="home" class=" active w3-bar-item w3-button w3-hover-pink">Home</a>
+		<a ui-sref="casualshoes" class="w3-bar-item w3-button w3-hover-pink"><i class="fa fa-shopping-cart w3-large"></i> Casual shoes</a>
+		<a ui-sref="formalshoes" class="w3-bar-item w3-button w3-hover-pink"><i class="fa fa-shopping-cart w3-large"></i> Fromal Shoes</a>
+		<a href="#" class="w3-bar-item w3-button w3-hover-pink"><i class="fa fa-shopping-cart w3-large"></i> Sneakers</a>
+		<a href="#" class="w3-bar-item w3-button w3-hover-pink"><i class="fa fa-shopping-cart w3-large"></i> Sport Shoes</a>
+		<a href="#" class="w3-bar-item w3-button w3-hover-pink"><i class="fa fa-shopping-cart w3-large"></i> Loafers</a>
+		<a href="#" class="w3-bar-item w3-button w3-hover-pink"> Return policy & FAQS</a>
+		<a href="#" class="w3-bar-item w3-button w3-hover-pink"> About us</a>
+	</div>
+
+	<div class="w3-main" id="main">
+
+		<div class="bgcolor w3-card-4">
+			<button class="w3-button w3-text-white w3-xlarge" onclick="w3_open()">&#9776;</button>
+			<div class="w3-center marginlogo">
+				<img src="assets/images/volume3.png">
+			</div>
+		</div>
+		<div ui-view>
+		</div>
+	</div>
+	<script>
+	function w3_open() {
+		document.getElementById("main").style.marginLeft = "20%";
+		document.getElementById("mySidebar").style.width = "20%";
+		document.getElementById("mySidebar").style.display = "block";
+		
+	}
+	function w3_close() {
+		document.getElementById("main").style.marginLeft = "0%";
+		document.getElementById("mySidebar").style.display = "none";
+		
+	}
+	</script>
+</body>
+</html>
