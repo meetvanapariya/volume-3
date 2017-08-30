@@ -14,5 +14,10 @@ angular.module("myApp",['ui.router'])
  	templateUrl : 'view/casualshoes.html',
  	controller : 'casualCltr'		
   })
+ .state('aboutus',{
+ 	url : '/aboutus',
+ 	templateUrl : 'view/aboutus.html',
+ 	controller : 'aboutCltr'		
+  })
  $urlRouterProvider.otherwise('/home');
 }])

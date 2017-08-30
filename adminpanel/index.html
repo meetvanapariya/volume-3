@@ -1,9 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="">
 <head>
 	<title>Admin panel of volume 3</title>
+	<script src="bower_component/angular/angular.min.js"></script>
+	<script src="bower_component/angular-ui-router/release/angular-ui-router.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="w3.css">
+<style>
+.bgColorLogo{
+	background-color:black;
+}
+label{
+	font-size: 25px;
+}
+.Ainput{
+	width: 20% !important;
+}
+</style>
 </head>
-<body>
-	
+<body class="w3-grey">
+	<div class="w3-center w3-card-4 bgColorLogo"><img src="assets/images/volume3.png"></div>
+	<div class="w3-center"><h1>Welcome to Admin Panel</h1></div>
+	<div class="w3-container">
+	<form method="post" action="http://localhost/25-8/server/validation.php">
+		 <label>Username:</label>
+  		 <p><input class="Ainput w3-input" type="text" id="nme" name="name"></p>
+  		 <label>Password:</label>
+  		 <p><input class="Ainput w3-input" type="password" id="pwd" name="password"></p>
+  		 <p><input type="submit" class="w3-btn w3-green"></input></p>
+	</form>
+	</div>
 </body>
 </html>

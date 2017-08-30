@@ -9,9 +9,11 @@
 	<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="w3.css">
 	<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
 	<script src = "app/app.config.js"></script>
+	<script src = "model/app.factory.js"></script>
 	<script src = "controller/casualCltr.js"></script>
+	<script src = "controller/aboutus.js"></script>
 	<style>
 	body{
     background: linear-gradient(to right, rgb(28,188,180), rgb(54,184,233));
@@ -39,7 +41,7 @@
 		<a href="#" class="w3-bar-item w3-button w3-hover-pink"><i class="fa fa-shopping-cart w3-large"></i> Sport Shoes</a>
 		<a href="#" class="w3-bar-item w3-button w3-hover-pink"><i class="fa fa-shopping-cart w3-large"></i> Loafers</a>
 		<a href="#" class="w3-bar-item w3-button w3-hover-pink"> Return policy & FAQS</a>
-		<a href="#" class="w3-bar-item w3-button w3-hover-pink"> About us</a>
+		<a ui-sref="aboutus" class="w3-bar-item w3-button w3-hover-pink"> About us</a>
 	</div>
 
 	<div class="w3-main" id="main">

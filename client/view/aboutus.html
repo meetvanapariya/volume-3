@@ -1,0 +1,39 @@
+<div>
+	<div class="w3-container">
+		<h2>About Us</h2>
+		<p>
+			VOLUME3.IN went live in 2010 and is the fastest growing company in the lifestyle category in India. It powered the sale of multi brand Footwear online Enormous success in the footwear category. We continue to power ahead with your support! Our Mission is: To provide best value for money to our customers To provide fastest shipping for our customer orders To provide widest range of choices for our customers To enable our brand partners to reach the widest audience To enable us meet our mission, we undertake some unique tasks in the industry We source all our products from Brands directly or authorized agent of the brand. We don't buy products without brand authorization We run our own warehousing operations to enable us to fulfill your orders completely and achieve fastest shipping in the industry.
+		</p>
+	</div>
+	<div class="w3-center"><button ng-click="myForm=true" class="w3-btn w3-pink">Submit form</button></div>
+	<div>
+	<div ng-show="myForm" class=" w3-margin myForm">
+		<form ng-submit="submitData(x)" ng-init="x={}">
+			<label>Name:</label>
+			<input class="w3-input w3-hover-light-grey" type="text" ng-model="x.firstname">
+			<label>SurName:</label>
+			<input class="w3-input  w3-hover-light-grey" type="text" ng-model="x.surname">
+			<label>Age:</label>
+			<input class="w3-input  w3-hover-light-grey" type="text" ng-model="x.age">
+			<p class="w3-center w3-margin-top"><button class="w3-btn w3-pink" type="submit">Submit</button></p>
+		</form>
+	</div>
+		<div class="w3-margin w3-border">
+			<table class="w3-table-all">  
+				<tr>
+					<th>no</th>
+					<th>Name</th>
+					<th>Surname</th>
+					<th>Age</th>
+				</tr>
+				<tr ng-repeat="x in allData">
+						<td>{{$index + 1}}</td>	
+						<td>{{x.name}}</td>
+						<td>{{x.surname}}</td>
+						<td>{{x.age}} <button class="w3-btn w3-right w3-round w3-red" ng-click="deleteData(x.main_id)"><i class="fa fa-trash-o" aria-hidden="true"></i></button></td>
+
+				</tr> 
+			</table>
+		</div>
+	</div>
+</div>
